@@ -84,7 +84,7 @@ jobs:
     # 📚 See https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
     - name: Build Java
       run: |
-        mvn clean package -f tools/deploy/module2/pom.xml
+        mvn -DskipTests clean package -f pom.xml
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v4
